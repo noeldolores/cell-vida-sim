@@ -1,5 +1,5 @@
 function scr_progress_generation() {
-	if ds_list_size(grid_state_history) > 2 {
+	if ds_list_size(grid_state_history) > 5 {
 		ds_list_delete(grid_state_history, 0);	
 	}
 	ds_list_add(grid_state_history, ds_grid_write(cell_grid));

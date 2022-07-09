@@ -86,21 +86,20 @@ settings = {
 game_mode = settings.small;
 scr_game_size_reset();
 
-display_set_gui_size(1280,640);
+var _gui_width = 1280;
+var _gui_height = _gui_width * ((game_mode.height + game_mode.margin) / (game_mode.width + game_mode.margin));
+display_set_gui_size(_gui_width,_gui_height);
 draw_set_font(fn_default);
 
 generation_number = 0;
 grid_state_history = ds_list_create();
 grid_outline_width = 1;
 
-game_state = "placement"; //placement, simulation, history, gameover
+game_state = "placement"; //placement, simulation, gameover
 
 display_highscore_cells = false;
+display_previous_start_cells = false;
 
-debug_array = {
-	show_neighbor_grid : false,
-	show_cell_grid : false
-}
 
 color_scheme = settings.color.black;
 primary_color = color_scheme.primary;
@@ -110,3 +109,4 @@ scr_load_game();
 color_scheme = scr_match_color_scheme_on_load(primary_color)
 
 display_start_menu_text = true;
+display_info_text = false;

@@ -27,6 +27,19 @@ switch(room) {
 				}		
 			}
 		}
+		
+		//Display previous starting cells
+		if display_previous_start_cells {
+			for(var i = 0; i < ds_grid_width(starting_grid); i++) {
+				for(var j = 0; j < ds_grid_height(starting_grid); j++) {
+					if starting_grid[# i,j] == 1 {
+						var _x = (i * settings.cell_size) + (settings.cell_size/2) + grid_outline_width;
+						var _y = (j * settings.cell_size) + (settings.cell_size/2) + grid_outline_width;
+						draw_sprite_ext(color_scheme.sprite, 2, _x, _y, 1, 1, 0, c_white, 0.5);
+					}
+				}		
+			}
+		}
 	break;
 }
 

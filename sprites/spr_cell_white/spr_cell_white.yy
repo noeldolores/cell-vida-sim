@@ -101,8 +101,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cells",
+    "path": "folders/Sprites/Cells.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_cell_white",
